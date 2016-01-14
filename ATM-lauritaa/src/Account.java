@@ -28,13 +28,11 @@ public class Account {
      */
     private ArrayList<Transaction> transactions;
     
-    public void account (String name, User holder, Bank theBank){
+    public Account (String name, User holder, Bank theBank){
         this.name = name;
         this.holder = holder;
         this.uuid = theBank.getNewAccountUUID();
         this.transactions = new ArrayList<>();
-        holder.addAccount(this);
-        theBank.addAccount(this);
     }
     public String getUUID(){
         return uuid;

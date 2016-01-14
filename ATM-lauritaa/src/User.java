@@ -39,7 +39,7 @@ public class User {
      * @param pin
      * @param theBank 
      */
-    public void User(String firstName, String lastName, String pin, Bank theBank){
+    public User(String firstName, String lastName, String pin, Bank theBank){
             this.firstName=firstName;
             this.lastName=lastName;
         try {

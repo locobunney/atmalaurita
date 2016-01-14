@@ -18,7 +18,7 @@ public class Transaction {
     /**
      * time of transaction
      */
-    private Date timeStamp;
+    private Date timestamp;
     /**
      * optional user note with transaction
      */
@@ -27,4 +27,25 @@ public class Transaction {
      * account that initiates transaction
      */
     private Account inAccount;
+    /**
+     * transaction constructor
+     * @param amount
+     * @param inAccount 
+     */
+    public void Transaction(double amount, Account inAccount){
+        this.amount = amount;
+        this.inAccount = inAccount;
+        this.timestamp = new Date();
+        this.memo = "";
+    }
+    /**
+     * transaction constructor
+     * @param amount
+     * @param memo
+     * @param inAccount 
+     */
+    public void Transaction(double amount, String memo, Account inAccount){
+        Transaction(amount, inAccount);
+        this.memo = memo;
+    }
 }
